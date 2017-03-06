@@ -1,0 +1,50 @@
+@extends('admin.layouts.layout')
+
+@section('title')
+أضف زبون
+@endsection
+
+
+@section('header')
+
+
+@endsection
+
+
+
+
+@section('content')
+
+
+
+ <!-- Main content -->
+    <section class="content" style="direction:rtl">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">أضف زبون جديد</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+            {!! Form::open(["url"=>"/sellerout/customers" , "method"=>"POST" ]) !!}
+            @include('sellerOut.customers.form')
+            {!! Form::submit("أضف زبون" , ["class"=>"btn btn-info"]) !!}
+            {!! Form::close() !!}
+
+          </div>
+       </div>
+     </div>
+    </section>
+
+
+@endsection
+
+
+
+@section('footer')
+@endsection
+
+
+
+
